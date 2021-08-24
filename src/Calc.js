@@ -12,21 +12,21 @@ const Calc = () => {
     const [result,   setResult] = useState("")
     const [history, setHistory] = useState([])
 
-    // useEffect(() => {
-    //     const requestOptions = {
-    //         method: 'GET',
-    //         headers: {
-    //             "Accept": "application/json",
-    //         },
-    //         redirect: 'follow'
-    //     };
-    //
-    //     fetch("https://dry-dawn-14885.herokuapp.com/history", requestOptions)
-    //         .then(response => response.json())
-    //         .then(result => setHistory(result.records))
-    //         .catch(error => console.log('error', error));
-    //
-    // });
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            headers: {
+                "Accept": "application/json",
+            },
+            redirect: 'follow'
+        };
+
+        fetch("https://dry-dawn-14885.herokuapp.com/history", requestOptions)
+            .then(response => response.json())
+            .then(result => setHistory(result.records))
+            .catch(error => console.log('error', error));
+
+    });
 
     const InitValue1 = (e) => {
         setValue1(e.target.value)
