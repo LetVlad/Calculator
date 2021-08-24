@@ -6,10 +6,10 @@ import './calc.css'
 
 
 const Calc = () => {
-    const [value1, setValue1] = useState('')
-    const [value2, setValue2] = useState('')
-    const [operator, setOperator] = useState('addition')
-    const [result,   setResult] = useState('')
+    const [value1, setValue1] = useState("")
+    const [value2, setValue2] = useState("")
+    const [operator, setOperator] = useState("addition")
+    const [result,   setResult] = useState("")
     const [history, setHistory] = useState([])
 
     useEffect(() => {
