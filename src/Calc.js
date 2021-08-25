@@ -26,7 +26,7 @@ const Calc = () => {
             .then(result => setHistory(result.records))
             .catch(error => console.log('error', error));
 
-    });
+    }, []);
 
     const InitValue1 = (e) => {
         setValue1(e.target.value)
